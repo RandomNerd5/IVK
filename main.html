@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .hero {
+            background-image: url('back.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+        }
+        .section h1 {
+            font-size: 2.5em;
+            text-align: center;
+        }
+        .section p {
+            font-size: 1.2em;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .map-container {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        svg {
+            max-width: 100%;
+            height: auto;
+        }
+        .btn {
+            fill: #007bff;
+            stroke: #0056b3;
+            stroke-width: 2;
+            cursor: pointer;
+            transition: fill 0.3s;
+        }
+        .btn:hover {
+            fill: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!--  -->
+    <section class="hero">
+        <h1>Города где жил и работал И.В. Курчатов</h1>
+        <p>Узнайте, в каких городах России советский физик Игорь Васильевич Курчатов, один из основоположников использования ядерной энергии в мирных целях, жил и работал.</p>
+    </section>
+
+    <!-- ИНТЕРАКТИВНАЯ КАРТА -->
+<!-- Интерактивная карта с фоновым изображением 2.png -->
+<section class="map-container">
+    <h2>ИНТЕРАКТИВНАЯ КАРТА</h2>
+    <p>По городам, где жил и работал И.В. Курчатов.</p>
+    <div style="position: relative; max-width: 3000px; margin: 0 auto; height: 400px;">
+        <!-- Фоновое изображение карты -->
+        <img src="map.jpg" alt="Карта" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+        
+        <!-- SVG с кнопками поверх изображения -->
+        <svg style="position: absolute; top: 0; left: 0; width: 50%; height: 50%;" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- 6 интерактивных кнопок (круги) -->
+            <a href="https://example.com/page1">
+                <circle class="btn" cx="80" cy="80" r="40" />
+                <text x="80" y="85" text-anchor="middle" fill="white" font-weight="bold" font-size="14">1</text>
+            </a>
+            <a href="https://example.com/page2">
+                <circle class="btn" cx="200" cy="60" r="40" />
+                <text x="200" y="65" text-anchor="middle" fill="white" font-weight="bold" font-size="14">2</text>
+            </a>
+            <a href="https://example.com/page3">
+                <circle class="btn" cx="320" cy="90" r="40" />
+                <text x="320" y="95" text-anchor="middle" fill="white" font-weight="bold" font-size="14">3</text>
+            </a>
+            <a href="https://example.com/page4">
+                <circle class="btn" cx="100" cy="200" r="40" />
+                <text x="100" y="205" text-anchor="middle" fill="white" font-weight="bold" font-size="14">4</text>
+            </a>
+            <a href="https://example.com/page5">
+                <circle class="btn" cx="220" cy="220" r="40" />
+                <text x="220" y="225" text-anchor="middle" fill="white" font-weight="bold" font-size="14">5</text>
+            </a>
+            <a href="https://example.com/page6">
+                <circle class="btn" cx="320" cy="240" r="40" />
+                <text x="320" y="245" text-anchor="middle" fill="white" font-weight="bold" font-size="14">6</text>
+            </a>
+        </svg>
+    </div>
+</section>
+
+</body>
+</html>
